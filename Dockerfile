@@ -2,7 +2,7 @@
 #FROM microsoft/dotnet:sdk-nanoserver
 FROM microsoft/dotnet:2.0-sdk
 
-SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+# SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 RUN New-Item -Path \MusicStore\samples\MusicStore -Type Directory; `
      New-Item -Path build -Type Directory
