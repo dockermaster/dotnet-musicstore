@@ -7,7 +7,7 @@ COPY samples/MusicStore/MusicStore.csproj samples/MusicStore/MusicStore.csproj
 COPY NuGet.config .
 COPY version.props .
 COPY build/*.props build/
-RUN dotnet restore --runtime win10-x64 .\samples\MusicStore
+RUN dotnet restore --runtime ubuntu.16.04-arm .\samples\MusicStore
 
 COPY samples samples
 RUN dotnet build --framework netcoreapp1.1 --runtime ubuntu.16.04-arm .\samples\MusicStore
