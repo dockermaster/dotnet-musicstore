@@ -10,7 +10,7 @@ COPY build/*.props build/
 RUN dotnet restore --runtime win10-x64 .\samples\MusicStore
 
 COPY samples samples
-RUN dotnet build --framework netcoreapp1.1 --runtime win10-x64 .\samples\MusicStore
+RUN dotnet build --framework netcoreapp1.1 --runtime ubuntu.16.04-arm .\samples\MusicStore
 
 EXPOSE 5000
 ENV ASPNETCORE_URLS http://0.0.0.0:5000
